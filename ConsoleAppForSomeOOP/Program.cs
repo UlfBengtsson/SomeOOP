@@ -7,6 +7,11 @@ namespace ConsoleAppForSomeOOP
     {
         static void Main(string[] args)
         {
+            Exampel();
+        }
+
+        static void Exampel()
+        {
             Console.WriteLine("Hello World!");
 
             Brand saab = new Brand();
