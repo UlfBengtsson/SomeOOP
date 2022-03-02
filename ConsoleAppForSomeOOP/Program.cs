@@ -11,32 +11,40 @@ namespace ConsoleAppForSomeOOP
             //Exampel();
             string[] names = new string[] { "Ulf", "Kent", "Jonas" };
 
-            PrintNames(names);
+            PrintArray(names);
 
             //names = names.Append("Sven").ToArray();//Linq way to incress size and add name last in the array
-            AddNameToArray(ref names, "Ola");
+            AddToArray(ref names, "Ola");
 
-            PrintNames(names);
+            PrintArray(names);
+
+            int[] numbers = new int[] { 1, 2, 3 };
+
+            PrintArray(numbers);
+
+            AddToArray(ref numbers, 4);
+
+            PrintArray(numbers);
         }
 
-        static void PrintNames(String[] stringArray)
+        static void PrintArray<T>(T[] stringArray)
         {
-            foreach (String name in stringArray)
+            foreach (var name in stringArray)
             {
                 Console.WriteLine(name);
             }
             Console.WriteLine("--------------------------------");
         }
 
-        static void AddNameToArray(ref String[] namesArray, string name)
+        static void AddToArray<T>(ref T[] array, T toAdd)
         {
-            IncressSizeOfArray(ref namesArray);
-            namesArray[namesArray.Length - 1] = name;
+            IncressSizeOfArray(ref array);
+            array[array.Length - 1] = toAdd;
         }
 
-        static void IncressSizeOfArray(ref String[] stringArray)
+        static void IncressSizeOfArray<T>(ref T[] array)
         {
-            Array.Resize(ref stringArray, stringArray.Length + 1);
+            Array.Resize(ref array, array.Length + 1);
         }
 
         static void Exampel()
