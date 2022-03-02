@@ -10,9 +10,9 @@ namespace ConsoleAppForSomeOOP
             Console.WriteLine("Hello World!");
 
             Brand saab = new Brand();
-            saab.Name = "SAAB";
+            saab.Name = "Volvo";
 
-            Car car = new Car(Guid.NewGuid(), "900", saab);
+            Car car = new Car(Guid.NewGuid(), "V70", saab);
 
             Console.WriteLine(car.Info());
 
@@ -20,7 +20,7 @@ namespace ConsoleAppForSomeOOP
             volvo.Name = "Volvo";
 
             Car anotherCar = new Car(Guid.NewGuid(), "740", volvo, "Gray");
-            anotherCar.RegPlate = "ABC321";
+            anotherCar.RegPlate = "CBA321";
 
             Console.WriteLine(anotherCar.Info());
         }
