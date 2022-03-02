@@ -27,11 +27,11 @@ namespace ConsoleAppForSomeOOP
             PrintArray(numbers);
         }
 
-        static void PrintArray<T>(T[] stringArray)
+        static void PrintArray<T>(T[] array)
         {
-            foreach (var name in stringArray)
+            foreach (var item in array)
             {
-                Console.WriteLine(name);
+                Console.WriteLine(item);
             }
             Console.WriteLine("--------------------------------");
         }
