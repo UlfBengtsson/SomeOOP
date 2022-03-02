@@ -14,7 +14,7 @@ namespace ConsoleAppForSomeOOP
             PrintNames(names);
 
             //names = names.Append("Sven").ToArray();//Linq way to incress size and add name last in the array
-            names = AddNameToArray(names, "Ola");
+            AddNameToArray(ref names, "Ola");
 
             PrintNames(names);
         }
@@ -28,18 +28,15 @@ namespace ConsoleAppForSomeOOP
             Console.WriteLine("--------------------------------");
         }
 
-        static String[] AddNameToArray(String[] namesArray, string name)
+        static void AddNameToArray(ref String[] namesArray, string name)
         {
-            namesArray = IncressSizeOfArray(namesArray);
+            IncressSizeOfArray(ref namesArray);
             namesArray[namesArray.Length - 1] = name;
-
-            return namesArray;
         }
 
-        static String[] IncressSizeOfArray(String[] stringArray)
+        static void IncressSizeOfArray(ref String[] stringArray)
         {
             Array.Resize(ref stringArray, stringArray.Length + 1);
-            return stringArray;
         }
 
         static void Exampel()
